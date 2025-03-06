@@ -62,13 +62,13 @@ public class DriverFactory {
 			driver = new EdgeDriver();
 		}
 		else {
-			System.out.println("Please pass the right browser.. ");
+			System.out.println("Please pass the right browser name.. ");
 		}
 		
 		getDriver().manage().deleteAllCookies();
 		getDriver().manage().window().maximize();
 		
-		getDriver().get(prop.getProperty("url"));
+		getDriver().get(prop.getProperty("url").trim());
 		
 		return getDriver();
 		
